@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import "../css/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import StoreIcon from "@mui/icons-material/Store";
-import {initializeApp } from "firebase/app"
+
+
+
+
+import { auth } from "./firebase.js";
+
 
 
 const Login = () => {
@@ -10,7 +15,7 @@ const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
-	/* (const signIn = (e) => {
+	const signIn = (e) => {
 		e.preventDefault();
 
 		auth
@@ -20,7 +25,6 @@ const Login = () => {
 			})
 			.catch((error) => alert(error.message));
 	};
-*/
 	const register = (e) => {
 		e.preventDefault();
 
@@ -70,8 +74,8 @@ const Login = () => {
 				</form>
 
 				<p>
-					By signing-in you agree to the myShop Website Conditions of Use & Sale.
-					Please see our Privacy Notice, our Cookies Notice and our
+					By signing-in you agree to the myShop Website Conditions of Use &
+					Sale. Please see our Privacy Notice, our Cookies Notice and our
 					Interest-Based Ads Notice.
 				</p>
 
@@ -83,6 +87,4 @@ const Login = () => {
 	);
 };
 
-
-
-export default Login
+export default Login;

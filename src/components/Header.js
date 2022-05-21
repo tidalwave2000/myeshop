@@ -26,12 +26,13 @@ const Header = () => {
 			{/* Header navigation section */}
 			<div className="header__nav">
 				{/* Sign-in section */}
+				
 				<Link to="/login" style={{ textDecoration: "none" }}>
 					<div className="nav__item">
 						<span className="nav__itemLineOne">Hello Guest</span>
 						<span className="nav__itemLineTwo">Sign In</span>
 					</div>
-				</Link>
+				</Link> 
 				{/* your shop section */}
 				<div className="nav__item">
 					<span className="nav__itemLineOne">Your</span>
