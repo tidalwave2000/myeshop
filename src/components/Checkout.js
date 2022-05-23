@@ -18,10 +18,11 @@ const Checkout = () => {
 					/>
 
 					<div className="">
-					<h2 className="checkout__title">Your Shopping Basket</h2>
-					{/* use map to search thru the array and display all items in the array */}
+						<h2 className="checkout__title">Your Shopping Basket</h2>
+						{/* use map to search thru the array and display all items in the array */}
 						{basket.map((item) => (
 							<CheckoutProduct
+								
 								id={item.id}
 								title={item.title}
 								image={item.image}

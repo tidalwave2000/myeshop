@@ -6,7 +6,7 @@ import StoreIcon from "@mui/icons-material/Store";
 
 
 
-import { auth } from "./firebase.js";
+import { auth } from "./firebase";
 
 
 
@@ -21,7 +21,7 @@ const Login = () => {
 		auth
 			.signInWithEmailAndPassword(email, password)
 			.then((auth) => {
-				history.push("/");
+				history("/");
 			})
 			.catch((error) => alert(error.message));
 	};
@@ -32,7 +32,7 @@ const Login = () => {
 			.createUserWithEmailAndPassword(email, password)
 			.then((auth) => {
 				if (auth) {
-					history.push("/");
+					history("/");
 				}
 			})
 			.catch((error) => alert(error.message));

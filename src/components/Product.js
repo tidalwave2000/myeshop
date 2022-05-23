@@ -4,7 +4,6 @@ import { useStateValue } from "./StateProvider";
 
 //pass props id, title,price,rating, and image to Product function
 const Product = ({ id, title, price, rating, image }) => {
-	
 	const [state, dispatch] = useStateValue();
 
 	const addToBasket = () => {
@@ -23,7 +22,7 @@ const Product = ({ id, title, price, rating, image }) => {
 		<div>
 			{/* Start setting up the home product sections */}
 			<div className="product">
-				<div className="product__info">
+				<div key={id} className="product__info">
 					<p>{title}</p>
 					<p className="product__price">
 						<small>$</small>
